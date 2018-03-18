@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test": "jasmine --config=jasmine.json",
-    "lint": "eslint **/*.js"
+    "lint": "eslint asciidoctor-plantuml.js spec"
   },
   "repository": "git+https://github.com/eshepelyuk/asciidoctor-plantuml.js.git",
   "keywords": [

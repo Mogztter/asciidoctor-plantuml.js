@@ -46,13 +46,14 @@ function plantumlBlock () {
     let content;
     if (serverUrl) {
       const shouldFetch = parent.getDocument().isAttribute('plantuml-fetch-diagram');
+      const imageTag = createImageTag(serverUrl, shouldFetch,
+        parent.getDocument().getAttribute('imagesoutdir'),
+        reader.getLines().join('\n'),
+        Opal.hash_get(attrs, 'id'));
       content = `
 <div class="imageblock">
 <div class="content">
-${createImageTag(serverUrl, shouldFetch, 
-    parent.getDocument().getAttribute('imagesoutdir'), 
-    reader.getLines().join('\n'), 
-    Opal.hash_get(attrs, 'id'))}
+${imageTag}
 </div>
 </div>`;
     } else {
