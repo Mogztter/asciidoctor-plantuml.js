@@ -10,7 +10,7 @@ alice -> bob
 const DIAGRAM_SIZE = 1788;
 
 const plantuml = require('../asciidoctor-plantuml.js');
-const asciidoctor = require('../node_modules/asciidoctor.js/dist/asciidoctor')();
+const asciidoctor = require('asciidoctor.js')();
 const fs = require('fs');
 const tmp = require('tmp');
 const path = require('path');
