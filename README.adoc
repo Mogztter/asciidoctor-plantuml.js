@@ -19,7 +19,7 @@ endif::[]
 
 == Overview
 
-This extension tries to mimic the behaviour of https://asciidoctor.org/docs/asciidoctor-diagram[Asciidoctor Diagram] as close as possible.
+This extension mimics the behavior of the PlantUML support in https://asciidoctor.org/docs/asciidoctor-diagram[Asciidoctor Diagram] as close as possible.
 Positional and named attributes, as well as, PNG and SVG formats are supported.
 
 .PlantUML example
@@ -33,13 +33,13 @@ alice -> bob
 <2> positional attributes are supported
 <3> named attributes are supported
 
-Unlike _Asciidoctor Diagram_, the extension uses https://github.com/plantuml/plantuml-server[PlantUML server] for displaying images.
+Unlike _Asciidoctor Diagram_, this extension uses https://github.com/plantuml/plantuml-server[PlantUML server] for displaying images.
 Inside `image` tags produced by it, the `src` attribute contains a link to PlantUML server.
 
 [NOTE]
 ====
-Since _PlantUML server_ supports some other formats, it's possible to use http://ditaa.sourceforge.net/[Ditaa] and http://www.graphviz.org/doc/info/lang.html[Graphiz (DOT)] syntax as well.
-Check http://plantuml.com/[PlantUML site] for the complete list of supported diagrams.
+Since the _PlantUML server_ supports some other formats, it's possible to use http://ditaa.sourceforge.net/[Ditaa] and http://www.graphviz.org/doc/info/lang.html[Graphiz (DOT)] syntax as well.
+Check the http://plantuml.com/[PlantUML website] for the complete list of supported diagrams.
 ====
 
 .Ditaa example
