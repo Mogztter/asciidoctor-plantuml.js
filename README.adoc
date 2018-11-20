@@ -38,7 +38,7 @@ Inside `image` tags produced by it, the `src` attribute contains a link to Plant
 
 [NOTE]
 ====
-Since the _PlantUML server_ supports some other formats, it's possible to use http://ditaa.sourceforge.net/[Ditaa] and http://www.graphviz.org/doc/info/lang.html[Graphiz (DOT)] syntax as well.
+Since the _PlantUML server_ supports some other formats, it's possible to use the http://ditaa.sourceforge.net/[Ditaa] and http://www.graphviz.org/doc/info/lang.html[Graphiz (DOT)] syntax as well.
 Check the http://plantuml.com/[PlantUML website] for the complete list of supported diagrams.
 ====
 
