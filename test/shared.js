@@ -16,7 +16,7 @@ sharedSpec.FIXTURES = {
     source: `@startuml
 alice -> bob
 @enduml`,
-    pngHash: 'cf012b2c24924760cb2d6ceb53ecf4ee',
+    pngHash: 'db998b925448b83cec5f66f27b890501',
     svgHash: '03a59f85e7c134e78072c64936715c93',
     hasStartEndDirectives: true,
     format: 'plantuml'
@@ -27,7 +27,7 @@ alice -> bob
 alice -> bob
 bob ..> alice
 `,
-    pngHash: 'b762b1e08fd14929a7c66cde21ee50fc',
+    pngHash: '89a82cde9799e0ffe215deccb5614e7c',
     svgHash: 'fe1e5e571adeaf1b2b64f7cc72465a25',
     hasStartEndDirectives: false,
     format: 'plantuml'
@@ -42,7 +42,7 @@ bob ..> alice
 |       {s}|   +-------------+
 +----------+
 `,
-    pngHash: '44ab1d8bee2efd5c7ad6104052ae08c2',
+    pngHash: '51203700c39d9e636984cbb224ffd45b',
     hasStartEndDirectives: false,
     format: 'ditaa'
   },
@@ -58,7 +58,7 @@ digraph foo {
   node1 -> node2 -> node3
 }
 `,
-    pngHash: '56616a6dc2fa9859f0cce7f3f1e6c546',
+    pngHash: '0d9ac74235000a1cd78857397af26b53',
     svgHash: '8c760726ad7ae0bd58ababb53a2ee54a',
     hasStartEndDirectives: false,
     format: 'graphviz'
@@ -72,7 +72,10 @@ sharedSpec.PLANTUML_REMOTE_URL = 'http://www.plantuml.com/plantuml'
  * Convert an AsciiDoc content to a "JQuery" DOM
  * @param asciidocContent
  */
-sharedSpec.toJQueryDOM = (asciidocContent) => cheerio.load(asciidoctor.convert(asciidocContent, {extension_registry: registry}))
+sharedSpec.toJQueryDOM = (asciidocContent) => cheerio.load(asciidoctor.convert(asciidocContent, {
+  attributes: {'allow-uri-read': true},
+  extension_registry: registry
+}))
 
 /**
  * Generate an AsciiDoc content containing a PlantUML diagram

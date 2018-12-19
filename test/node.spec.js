@@ -11,6 +11,7 @@ shared.run() // Run shared tests
 describe('diagram fetching', () => {
   let src
 
+  /*
   afterEach(() => {
     try {
       fs.unlinkSync(src)
@@ -18,6 +19,7 @@ describe('diagram fetching', () => {
       // ignore
     }
   })
+  */
 
   for (let name in shared.FIXTURES) {
     const fixture = shared.FIXTURES[name]
