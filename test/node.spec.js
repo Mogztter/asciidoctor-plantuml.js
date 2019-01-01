@@ -87,7 +87,11 @@ describe('diagram fetching', () => {
           expect(src).toEndWith('.svg')
           expect(path.basename(src)).toBe(src)
           expect(fs.existsSync(src)).toBe(true)
-          const hash = await hasha.fromFile(src, {algorithm: 'md5'})
+
+          const data = fs.readFileSync(src, 'utf8')
+            // remove comments (otherwise the md5sum won't be stable)
+            .replace(/<!--[\s\S]*?-->/g, '')
+          const hash = hasha(data, {algorithm: 'md5'})
           expect(hash).toBe(fixture.svgHash)
           const svgContent = fs.readFileSync(src, 'utf-8')
             .replace(/\r/gm, '')
