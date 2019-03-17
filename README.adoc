@@ -108,8 +108,8 @@ E.g. `./assets/images`
 
 == Antora integration
 
-Integration is just the matter of enabling the extension in https://docs.antora.org/antora/1.0/playbook/playbook/[site playbook]
-and providing address of PlantUML server in its config.
+Integration is just the matter of enabling the extension in https://docs.antora.org/antora/2.0/playbook/[site playbook]
+and providing address of PlantUML server via extension's config.
 
 There's https://github.com/eshepelyuk/asciidoctor-plantuml-antora[sample repository] demonstrating usage of this extension in `Antora`.
 
